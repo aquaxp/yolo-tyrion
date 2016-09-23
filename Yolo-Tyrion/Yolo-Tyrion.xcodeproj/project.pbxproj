@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E19047681A17BD06005F31F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E19047671A17BD05005F31F6 /* AppDelegate.m */; };
+		E190476A1A17BD06005F31F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E19047691A17BD06005F31F6 /* main.m */; };
+		E190476C1A17BD06005F31F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E190476B1A17BD06005F31F6 /* Images.xcassets */; };
+		E190476F1A17BD06005F31F6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E190476D1A17BD06005F31F6 /* MainMenu.xib */; };
+		E19047881A22754A005F31F6 /* MenubarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E19047871A22754A005F31F6 /* MenubarController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E19047611A17BD05005F31F6 /* Yolo-Tyrion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yolo-Tyrion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E19047651A17BD05005F31F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E19047661A17BD05005F31F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E19047671A17BD05005F31F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E19047691A17BD06005F31F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E190476B1A17BD06005F31F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E190476E1A17BD06005F31F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E19047851A1E541D005F31F6 /* iTunes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iTunes.h; sourceTree = "<group>"; };
+		E19047861A22754A005F31F6 /* MenubarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenubarController.h; sourceTree = "<group>"; };
+		E19047871A22754A005F31F6 /* MenubarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenubarController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E190475E1A17BD05005F31F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E19047581A17BD05005F31F6 = {
+			isa = PBXGroup;
+			children = (
+				E19047631A17BD05005F31F6 /* Yolo-Tyrion */,
+				E19047621A17BD05005F31F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E19047621A17BD05005F31F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E19047611A17BD05005F31F6 /* Yolo-Tyrion.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E19047631A17BD05005F31F6 /* Yolo-Tyrion */ = {
+			isa = PBXGroup;
+			children = (
+				E19047841A1B89A3005F31F6 /* Controllers */,
+				E19047661A17BD05005F31F6 /* AppDelegate.h */,
+				E19047671A17BD05005F31F6 /* AppDelegate.m */,
+				E190476B1A17BD06005F31F6 /* Images.xcassets */,
+				E190476D1A17BD06005F31F6 /* MainMenu.xib */,
+				E19047641A17BD05005F31F6 /* Supporting Files */,
+			);
+			path = "Yolo-Tyrion";
+			sourceTree = "<group>";
+		};
+		E19047641A17BD05005F31F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E19047851A1E541D005F31F6 /* iTunes.h */,
+				E19047651A17BD05005F31F6 /* Info.plist */,
+				E19047691A17BD06005F31F6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E19047841A1B89A3005F31F6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E19047861A22754A005F31F6 /* MenubarController.h */,
+				E19047871A22754A005F31F6 /* MenubarController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E19047601A17BD05005F31F6 /* Yolo-Tyrion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E190477E1A17BD06005F31F6 /* Build configuration list for PBXNativeTarget "Yolo-Tyrion" */;
+			buildPhases = (
+				E190475D1A17BD05005F31F6 /* Sources */,
+				E190475E1A17BD05005F31F6 /* Frameworks */,
+				E190475F1A17BD05005F31F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yolo-Tyrion";
+			productName = "Yolo-Tyrion";
+			productReference = E19047611A17BD05005F31F6 /* Yolo-Tyrion.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E19047591A17BD05005F31F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = aquaxp.tk;
+				TargetAttributes = {
+					E19047601A17BD05005F31F6 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = E190475C1A17BD05005F31F6 /* Build configuration list for PBXProject "Yolo-Tyrion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E19047581A17BD05005F31F6;
+			productRefGroup = E19047621A17BD05005F31F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E19047601A17BD05005F31F6 /* Yolo-Tyrion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E190475F1A17BD05005F31F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E190476C1A17BD06005F31F6 /* Images.xcassets in Resources */,
+				E190476F1A17BD06005F31F6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E190475D1A17BD05005F31F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E190476A1A17BD06005F31F6 /* main.m in Sources */,
+				E19047681A17BD06005F31F6 /* AppDelegate.m in Sources */,
+				E19047881A22754A005F31F6 /* MenubarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E190476D1A17BD06005F31F6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E190476E1A17BD06005F31F6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E190477C1A17BD06005F31F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E190477D1A17BD06005F31F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E190477F1A17BD06005F31F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Yolo-Tyrion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E19047801A17BD06005F31F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Yolo-Tyrion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E190475C1A17BD05005F31F6 /* Build configuration list for PBXProject "Yolo-Tyrion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E190477C1A17BD06005F31F6 /* Debug */,
+				E190477D1A17BD06005F31F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E190477E1A17BD06005F31F6 /* Build configuration list for PBXNativeTarget "Yolo-Tyrion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E190477F1A17BD06005F31F6 /* Debug */,
+				E19047801A17BD06005F31F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E19047591A17BD05005F31F6 /* Project object */;
+}

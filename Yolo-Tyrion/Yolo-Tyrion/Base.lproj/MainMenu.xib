@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14F1909" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="_launchItem" destination="quy-jb-Fu1" id="PLd-QW-f2h"/>
+                <outlet property="statusMenu" destination="WlN-ra-emN" id="3ma-8c-QzM"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="WlN-ra-emN">
+            <items>
+                <menuItem title="Launch iTunes" id="quy-jb-Fu1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="launchITunes:" target="Voe-Tx-rLC" id="vyE-Sp-qE8"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About" id="ZnC-wM-Qkq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="orderFrontStandardAboutPanel:" target="-1" id="op8-jT-4jH"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Exit" id="pTo-f6-ipU">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-1" id="WdU-j5-zQc"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="259.5" y="20.5"/>
+        </menu>
+    </objects>
+</document>
