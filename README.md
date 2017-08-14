@@ -10,7 +10,7 @@ And of course, you able to launch iTunes from menu.
 
 Download
 --------
-Latest release [here] (https://github.com/aquaxp/yolo-tyrion/releases/latest)
+Latest release [here](https://github.com/aquaxp/yolo-tyrion/releases/latest)
 
 Screenshots
 -----------
