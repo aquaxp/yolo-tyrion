@@ -13,7 +13,6 @@
 
 @implementation AppDelegate
 - (void) updateData:(NSNotification *) notification{
-
     // First, check that iTunes is running, if no, show logo and return
     if (![iTunes isRunning]){
         NSLog(@"No iTunes");
@@ -58,7 +57,6 @@
             break;
     }
 }
-
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Adding itunes observer
