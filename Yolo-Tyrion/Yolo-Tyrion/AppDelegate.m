@@ -19,6 +19,8 @@
         [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
         [_launchItem setHidden:NO];
         return;
+    } else {
+        NSLog(@"iTunes is running");
     }
 
     // Hide Launch Item
@@ -26,16 +28,16 @@
 
     // state branches
     switch ([iTunes playerState]) {
-        // Not used?
         case iTunesEPlSFastForwarding:
             NSLog(@"iTunses state: FastForwarding(%d)", [iTunes playerState]);
+            break;
         case iTunesEPlSRewinding:
             NSLog(@"iTunses state: Rewinding(%d)", [iTunes playerState]);
             NSLog(@"Unused iTunses state");
             break;
-        // iTunes stoped, so we can show only ◼ symbol
         case iTunesEPlSStopped:
             NSLog(@"iTunses state: Stopped(%d)", [iTunes playerState]);
+
             [[statusItem button] setTitle:[NSString stringWithFormat:@"◼"]];
             break;
         case iTunesEPlSPaused:
@@ -51,10 +53,11 @@
             [[statusItem button] setTitle:[NSString stringWithFormat:@"► %@: %@",[[iTunes currentTrack] artist], [[iTunes currentTrack] name]]];
             break;
         default:
+            NSLog(@"iTunses state: Unsupported(%d)", [iTunes playerState]);
+
             // In any other case - show logo
             [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
             [_launchItem setHidden:NO];
-            break;
     }
 }
 
