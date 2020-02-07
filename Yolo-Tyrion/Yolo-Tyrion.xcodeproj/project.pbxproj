@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D32D04723EBF16700B0941B /* Spotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spotify.h; sourceTree = "<group>"; };
 		E19047611A17BD05005F31F6 /* Yolo-Tyrion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yolo-Tyrion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19047651A17BD05005F31F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E19047661A17BD05005F31F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		E19047641A17BD05005F31F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D32D04723EBF16700B0941B /* Spotify.h */,
 				E19047851A1E541D005F31F6 /* iTunes.h */,
 				E19047651A17BD05005F31F6 /* Info.plist */,
 				E19047691A17BD06005F31F6 /* main.m */,

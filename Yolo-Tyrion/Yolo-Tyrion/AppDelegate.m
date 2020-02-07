@@ -9,22 +9,24 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+- (void) updateDataFromiTunes:(NSNotification *) notification;
+- (void) updateDataFromSpotify:(NSNotification *) notification;
 @end
 
 @implementation AppDelegate
-- (void) updateData:(NSNotification *) notification{
+- (void) updateDataFromiTunes:(NSNotification *) notification{
     // First, check that iTunes is running, if no, show logo and return
     if (![iTunes isRunning]){
         NSLog(@"No iTunes");
         [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
-        [_launchItem setHidden:NO];
+        [_iTunesLaunchItem setHidden:NO];
         return;
     } else {
         NSLog(@"iTunes is running");
     }
 
     // Hide Launch Item
-    [_launchItem setHidden:YES];
+    [_iTunesLaunchItem setHidden:YES];
 
     // state branches
     switch ([iTunes playerState]) {
@@ -57,16 +59,67 @@
 
             // In any other case - show logo
             [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
-            [_launchItem setHidden:NO];
+            [_iTunesLaunchItem setHidden:NO];
+    }
+}
+
+- (void) updateDataFromSpotify:(NSNotification *) notification{
+    // First, check that iTunes is running, if no, show logo and return
+    if (![Spotify isRunning]){
+        NSLog(@"No Spotify");
+        [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
+        [_SpotifyLaunchItem setHidden:NO];
+        return;
+    } else {
+        NSLog(@"Spotify is running");
+    }
+
+    [_SpotifyLaunchItem setHidden:YES];
+
+    // state branches
+    switch ([Spotify playerState]) {
+        case SpotifyEPlSStopped:
+            NSLog(@"Spotify state: Stopped(%d)", [Spotify playerState]);
+
+            [[statusItem button] setTitle:[NSString stringWithFormat:@"◼"]];
+            if (![Spotify isRunning]) {
+                NSLog(@"No Spotify");
+                [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
+                [_SpotifyLaunchItem setHidden:NO];
+            }
+            break;
+        case SpotifyEPlSPaused:
+            NSLog(@"Spotify state: Paused(%d)", [Spotify playerState]);
+            NSLog(@"Current track %@ by %@",[[Spotify currentTrack] name], [[Spotify currentTrack] artist]);
+
+            [[statusItem button] setTitle:[NSString stringWithFormat:@"❙❙ %@: %@",[[Spotify currentTrack] artist], [[Spotify currentTrack] name]]];
+            break;
+        case SpotifyEPlSPlaying:
+            NSLog(@"Spotify state: Playing(%d)", [Spotify playerState]);
+            NSLog(@"Current track %@ by %@",[[Spotify currentTrack] name], [[Spotify currentTrack] artist]);
+
+            [[statusItem button] setTitle:[NSString stringWithFormat:@"► %@: %@",[[Spotify currentTrack] artist], [[Spotify currentTrack] name]]];
+            break;
+        default:
+            NSLog(@"Spotify state: Unsupported(%d)", [Spotify playerState]);
+
+            // In any other case - show logo
+            [[statusItem button] setTitle:[NSString stringWithFormat:@"●∿"]];
+            [_SpotifyLaunchItem setHidden:NO];
     }
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Adding itunes observer
-    [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData:) name:@"com.apple.iTunes.playerInfo" object:nil];
+    // Adding iTunes observer
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDataFromiTunes:) name:@"com.apple.iTunes.playerInfo" object:nil];
+
+    // Adding Spotify observer
+    [[NSDistributedNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDataFromSpotify:) name:@"com.spotify.client.PlaybackStateChanged" object:nil];
 
     // Registering iTunes
     iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    // Registering Spotify
+    Spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
 
     // Creating status item
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -76,18 +129,25 @@
     [statusItem setMenu:statusMenu];
 
     // First data update
-    [self updateData:nil];
+    [self updateDataFromiTunes:nil];
+    [self updateDataFromSpotify:nil];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // removing iTunes Observer
+    // removing Observers
     [[NSDistributedNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (IBAction)launchITunes:(id)sender{
     // Open iTunes and Update status
     [iTunes activate];
-    [self updateData:nil];
+    [self updateDataFromiTunes:nil];
+}
+
+- (IBAction)launchSpotify:(id)sender{
+    // Open Spotify and Update status
+    [Spotify activate];
+    [self updateDataFromSpotify:nil];
 }
 
 @end

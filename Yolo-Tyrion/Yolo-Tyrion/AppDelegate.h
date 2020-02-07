@@ -8,12 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "iTunes.h"
+#import "Spotify.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     NSStatusItem *statusItem;
     iTunesApplication* iTunes;
+    SpotifyApplication* Spotify;
     IBOutlet NSMenu *statusMenu;
-    IBOutlet NSMenuItem *_launchItem;
+    IBOutlet NSMenuItem *_iTunesLaunchItem;
+    IBOutlet NSMenuItem *_SpotifyLaunchItem;
 }
 
 @end
